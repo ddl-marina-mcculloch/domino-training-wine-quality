@@ -90,9 +90,9 @@ with mlflow.start_run(run_name=run_name):
     sns.regplot(data=results, x='Actuals', y='Predictions', order=3)
     plt.title('Sklearn Actuals vs Predictions Scatter Plot')
     #plt.savefig('/mnt/artifacts/visualizations/actual_v_pred_scatter.png')
-    plt.savefig('actual_v_pred_scatter.png')
+    plt.savefig('/mnt/visualizations/actual_v_pred_scatter.png')
     #mlflow.log_artifact('/mnt/artifacts/visualizations/actual_v_pred_scatter.png')
-    mlflow.log_artifact('actual_v_pred_scatter.png')
+    mlflow.log_artifact('/mnt/visualizations/actual_v_pred_scatter.png')
 
     # Create histogram
     plt.figure(figsize=(10, 6))
@@ -100,7 +100,7 @@ with mlflow.start_run(run_name=run_name):
     plt.title('Sklearn Actuals vs Predictions Histogram')
     plt.xlabel('Quality')
     #plt.savefig('/mnt/artifacts/visualizations/actual_v_pred_hist.png')
-    plt.savefig('actual_v_pred_hist.png')
+    plt.savefig('/mnt/visualizations/actual_v_pred_hist.png')
     #mlflow.log_artifact('/mnt/artifacts/visualizations/actual_v_pred_hist.png')
     mlflow.log_artifact('/mnt/visualizations/actual_v_pred_hist.png')
     
